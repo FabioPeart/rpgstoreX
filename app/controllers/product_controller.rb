@@ -2,7 +2,7 @@ class ProductController < ApplicationController
   # Collection action for all products.
   # GET /product/
   def index
-    @products = Product.order(:name)
+    @product_collection = Product.order(:name)
   end
 
   # Member action for a specific product by id.
