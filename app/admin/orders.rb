@@ -12,4 +12,7 @@ ActiveAdmin.register Order do
 #   permitted
 # end
 
+permit_params :date, :productprice, :quantity, :total, :appliedtax, :sentaddress
+
+
 end

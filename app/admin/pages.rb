@@ -12,4 +12,6 @@ ActiveAdmin.register Page do
 #   permitted
 # end
 
+permit_params :about, :contact_name, :contact_email
+
 end

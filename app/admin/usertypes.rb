@@ -12,4 +12,6 @@ ActiveAdmin.register Usertype do
 #   permitted
 # end
 
+permit_params :type_description
+
 end
