@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_05_034956) do
+ActiveRecord::Schema.define(version: 2018_11_05_035237) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(version: 2018_11_05_034956) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.datetime "date"
+    t.string "productprice"
+    t.integer "quantity"
+    t.decimal "total"
+    t.string "appliedtax"
+    t.string "sentaddress"
+    t.integer "orderstatus_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["orderstatus_id"], name: "index_orders_on_orderstatus_id"
+  end
+
   create_table "orderstatuses", force: :cascade do |t|
     t.string "statusname"
     t.datetime "created_at", null: false
@@ -53,6 +66,15 @@ ActiveRecord::Schema.define(version: 2018_11_05_034956) do
     t.decimal "total_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "userorders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_userorders_on_order_id"
+    t.index ["user_id"], name: "index_userorders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
