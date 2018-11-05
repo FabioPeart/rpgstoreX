@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'userorder/index'
+  get 'userorder/show'
   get 'user/index'
   get 'user/show'
   devise_for :admin_users, ActiveAdmin::Devise.config
