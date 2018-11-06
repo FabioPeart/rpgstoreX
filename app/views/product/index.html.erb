@@ -1,3 +1,31 @@
 <h1>RPG WORLD STORE</h1>
 
-<%= render partial: 'product/product', collection: @product_collection %>
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">Products</h3>
+                    <div class="section-nav">
+                        <ul class="section-tab-nav tab-nav">
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <%= render partial: 'product/product', collection: @product_collection %>
+            <!-- Products tab & slick -->
+
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+

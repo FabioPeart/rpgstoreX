@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  mount_uploader :picture, ImageUploader
   belongs_to :category, optional: true
 
   has_many :productorders

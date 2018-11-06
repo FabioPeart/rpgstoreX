@@ -172,12 +172,12 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li class="active"><a href="/product">Home</a></li>
 						<li><a href="#">Hot Deals</a></li>
 						<li><a href="#">All Products</a></li>
-						<li><a href="#">Books</a></li>
-						<li><a href="#">Dices</a></li>
-						<li><a href="#">Miniatures</a></li>
+            <% categories.each do |cat| %>
+              <li> <%= link_to cat.name, cat %></li>
+            <% end %>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -190,5 +190,12 @@
     <%= yield %>
 
 
+<!-- jQuery Plugins -->
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<script src="javascripts/slick.min.js"></script>
+		<script src="javascripts/nouislider.min.js"></script>
+		<script src="javascripts/jquery.zoom.min.js"></script>
+		<script src="javascripts/main.js"></script>
   </body>
 </html>
