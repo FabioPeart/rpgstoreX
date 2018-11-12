@@ -12,7 +12,7 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
-permit_params :name, :price, :price_sale, :description, :picture
+permit_params :name, :price, :price_sale, :description, :picture, :category_id
 
 
 end
