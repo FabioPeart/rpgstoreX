@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   mount_uploader :picture, ImageUploader
-  belongs_to :category, optional: true
+  belongs_to :category
 
   has_many :productorders
   has_many :orders, through: :productorders
