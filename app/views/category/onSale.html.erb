@@ -8,7 +8,7 @@
             <!-- section title -->
             <div class="col-md-12">
                 <div class="section-title">
-                    <h3 class="title">Category: <%= @category.name %></h3>
+                    <h3 class="title">Hot Deals!!!</h3>
                     <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
                 </div>
@@ -16,7 +16,7 @@
             <!-- /section title -->
 
             <!-- Products tab & slick -->
-            <%= render partial: 'category/category', object: @products_by_category %>
+            <%= render partial: 'category/onSale', object: @products_by_sale %>
             <!-- Products tab & slick -->
 
         </div>
