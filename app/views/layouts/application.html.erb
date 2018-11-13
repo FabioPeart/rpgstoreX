@@ -176,9 +176,8 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><%= link_to "All Products", root_path %></li>
-						<%# <li><a href="category/onSale">Hot Deals</a></li> %>
             <li><%= link_to "Hot Deals", {:controller => "category", :action => "onSale" } %>  </li>
-            <li><a href="#">New Products</a></li>
+            <li><%= link_to "New Products", {:controller => "category", :action => "newProducts" } %>  </li>
             <% categories.each do |cat| %>
               <li> <%= link_to cat.name, cat %></li>
             <% end %>

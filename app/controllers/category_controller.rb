@@ -10,6 +10,11 @@ class CategoryController < ApplicationController
   end
 
   def onSale
-    @products_by_sale = Product.where("price_sale > 0 ")
+    @products_by_sale = Product.where("price_sale > 0")
   end
+
+  def newProducts
+    @new_products = Product.where('created_at > ?', DateTime.now - 30)
+  end
+
 end
