@@ -93,9 +93,15 @@
                           <option value= <%= cat.name %> > <%= link_to cat.name, cat %></option>
                         <% end %>
                       </select>
-                      <input class="input" placeholder="Search here">
-                      <button class="search-btn">Search</button>
+                         
+                      <%# <input class="input" placeholder="Search here">
+                      <button class="search-btn">Search</button> %>
                     </form>
+                    <%= form_tag(results_search_index_path, method: "get") do %>
+                        <%= label_tag(:q, "Search for X:") %>
+                        <%= text_field_tag(:q, nil, {:onkeyup => 'quickSearch()'}) %>
+                        <%= submit_tag("Search") %>
+                      <% end %>
                   </div>
                 </div>
                 <!-- /SEARCH BAR -->
@@ -201,5 +207,6 @@
 		<script src="javascripts/nouislider.min.js"></script>
 		<script src="javascripts/jquery.zoom.min.js"></script>
 		<script src="javascripts/main.js"></script>
+    <script src="javascripts/search_helper.js"></script>
   </body>
 </html>
