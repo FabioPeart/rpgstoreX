@@ -42,6 +42,7 @@ gem 'activeadmin'
 gem 'carrierwave'
 gem 'devise'
 gem 'rubocop', require: false
+gem 'kaminari'
 # gem 'bootstrap'
 # gem 'jquery-rails'
 

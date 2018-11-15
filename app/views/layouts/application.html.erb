@@ -40,14 +40,11 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
-   
-    
   </head>
 
   <body>
     <!-- HEADER -->
-        <header>
+        <header>        
           <!-- TOP HEADER -->
           <div id="top-header">
             <div class="container">
@@ -174,7 +171,7 @@
 		<!-- /HEADER -->
 
     <!-- NAVIGATION -->
-		<nav id="navigation">
+		<nav id="navigation">    
 			<!-- container -->
 			<div class="container">
 				<!-- responsive-nav -->
@@ -196,7 +193,7 @@
 			<!-- /container -->
 		</nav>
 		<!-- /NAVIGATION -->
-
+    <%= paginate @product_collection %>
     <%= yield %>
 
 
