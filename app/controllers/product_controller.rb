@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductController < ApplicationController
   # Collection action for all products.
   # GET /product/
@@ -14,5 +16,4 @@ class ProductController < ApplicationController
   def show_by_category
     @product = Product.find(params[:category])
   end
-
 end

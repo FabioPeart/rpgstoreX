@@ -1,5 +1,7 @@
-class Usertype < ApplicationRecord
-    has_many :users
+# frozen_string_literal: true
 
-    validates :type_description, presence: true, uniqueness: true
+class Usertype < ApplicationRecord
+  has_many :users
+
+  validates :type_description, presence: true, uniqueness: true
 end

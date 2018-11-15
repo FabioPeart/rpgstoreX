@@ -1,6 +1,7 @@
-class Page < ApplicationRecord
+# frozen_string_literal: true
 
-    validates :about, presence: true
-    validates :contact_name, presence: true
-    validates :contact_email, presence: true
+class Page < ApplicationRecord
+  validates :about, presence: true
+  validates :contact_name, presence: true
+  validates :contact_email, presence: true
 end

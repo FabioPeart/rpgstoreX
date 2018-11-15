@@ -1,6 +1,6 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  
-  
   get 'category/index'
   get 'category/show'
   get 'category/onSale'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :product, only: [:index, :show]
+  resources :product, only: %i[index show]
   resources :category, only: [:show]
 
   resources :search, only: [:index] do

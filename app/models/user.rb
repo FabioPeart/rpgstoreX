@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   belongs_to :province
   belongs_to :usertype
@@ -12,6 +14,6 @@ class User < ApplicationRecord
   validates :postalcode, presence: true
 
   # def display_type
-  #   "User##{self.id} - User Type: #{user_type.type_description}"    
+  #   "User##{self.id} - User Type: #{user_type.type_description}"
   # end
 end

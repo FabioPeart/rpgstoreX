@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class Order < ApplicationRecord
   belongs_to :orderstatus
 
   has_many :userorders
   has_many :users, through: :userorders
   accepts_nested_attributes_for :userorders, allow_destroy: true
-  
 
   has_many :productorders
   has_many :products, through: :productorders

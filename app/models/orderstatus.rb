@@ -1,5 +1,7 @@
-class Orderstatus < ApplicationRecord
-    has_many :orders
+# frozen_string_literal: true
 
-    validates :statusname, presence: true, uniqueness: true
+class Orderstatus < ApplicationRecord
+  has_many :orders
+
+  validates :statusname, presence: true, uniqueness: true
 end

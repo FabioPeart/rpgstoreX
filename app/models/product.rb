@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Product < ApplicationRecord
   mount_uploader :picture, ImageUploader
   belongs_to :category
@@ -6,11 +8,10 @@ class Product < ApplicationRecord
   has_many :orders, through: :productorders
 
   validates :name, presence: true
-  validates :description, presence: true  
+  validates :description, presence: true
   # validates :price, numericality: { only_integer: true }
 
-  
   def display_category
-    "Product##{self.id} - Category: #{category.name}"    
+    "Product##{id} - Category: #{category.name}"
   end
 end
