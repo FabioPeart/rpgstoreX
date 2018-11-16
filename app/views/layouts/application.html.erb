@@ -95,7 +95,7 @@
                       <button class="search-btn">Search</button> %>
                     </form>
                     <%= form_tag(results_search_index_path, method: "get") do %>
-                        <%= label_tag(:q, "Search for X:") %>
+                        
                         <%= text_field_tag(:q, nil, {:onkeyup => 'quickSearch()'}) %>
                         <%= submit_tag("Search") %>
                       <% end %>
@@ -193,7 +193,14 @@
 			<!-- /container -->
 		</nav>
 		<!-- /NAVIGATION -->
+    <% if (defined? @product_collection)%>
     <%= paginate @product_collection %>
+    <% end %>
+
+    <% if (defined? @products_by_category)%>
+    <%= paginate @products_by_category %>
+    <% end %>
+
     <%= yield %>
 
 
